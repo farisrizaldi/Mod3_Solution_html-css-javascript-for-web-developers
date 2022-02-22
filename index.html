@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Meta Tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #121212;
+    }
+
+    /* Header */
+    #header-nav {
+      background-color: #f5f5f5;
+      position: block;
+      width: 100%;
+    }
+    #header-nav hr {
+      border: 2px solid black;
+      border-radius: 5px;
+      margin-top: 5px;
+    }
+    .navbar-brand {
+      font-weight: bold;
+      font-size: 36px;
+      color: #121212;
+    }
+    .navbar-toggler {
+      border: solid #000;
+      border-radius: 8px;
+      margin-top: 5px;
+    }
+    .navbar-collapse {
+      margin-top: 10px;
+    }
+    .nav-item a {
+      text-align: center;
+      color: #fff;
+      font-weight: 500;
+      font-size: 24px;
+    }
+    #navlink-1,
+    #navlink-2,
+    #navlink-3 {
+      height: 100%;
+      margin-top: 0;
+      transition: 0.4s;
+    }
+
+    #navlink-1:hover {
+      background-color: #f7d08a;
+      height: 65px;
+      margin-top: -10px;
+      border-radius: 8px;
+      transition: all 0.3s ease;
+    }
+
+    #navlink-2:hover {
+      background-color: #f7d08a;
+      height: 65px;
+      margin-top: -10px;
+      border-radius: 8px;
+      transition: all 0.3s ease;
+    }
+
+    #navlink-3:hover {
+      background-color: #f7d08a;
+      height: 65px;
+      margin-top: -10px;
+      border-radius: 8px;
+      transition: all 0.3s ease;
+    }
+    /* Header End */
+
+    h1 {
+      text-align: center;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      font-size: 48px;
+      margin-top: 25px;
+      margin-bottom: 25px;
+      color: #fff;
+    }
+
+    div > h3 {
+      position: absolute;
+      top: -19px;
+      right: 0px;
+      border: 2px solid black;
+      border-right: none;
+      border-top: none;
+      padding: 1px;
+      width: 40%;
+      text-align: center;
+      font-weight: bold;
+      font-size: 1.2em;
+      border-radius: 3px;
+    }
+    .menu-1 {
+      background-color: #f7d08a;
+      color: #000;
+      top: 0;
+      font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    }
+    .menu-2 {
+      background-color: #30475e;
+      color: #fff;
+      top: 0;
+      font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    }
+    .menu-3 {
+      background-color: #ff7272;
+      color: #000;
+      top: 0;
+      font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    }
+
+    .row {
+      width: 100%;
+      margin: auto;
+    }
+
+    #row-1-2-3 {
+      background-color: #f5f5f5;
+      position: relative;
+      top: 0;
+      margin: 15px;
+      padding: 25px 25px 25px 25px;
+      border-radius: 5px;
+      text-align: justify;
+      border-radius: 5px;
+      border: 2px solid black;
+      font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    }
+
+    #row-1-2-3 p {
+      margin-top: 15px;
+    }
+
+    @media (min-width: 992px) {
+      .col-lg-1,
+      .col-lg-2,
+      .col-lg-3,
+      .col-lg-4,
+      .col-lg-5,
+      .col-lg-6,
+      .col-lg-7,
+      .col-lg-8,
+      .col-lg-9,
+      .col-lg-10,
+      .col-lg-11,
+      .col-lg-12 {
+        float: left;
+      }
+      .col-lg-1 {
+        width: 8.33%;
+      }
+      .col-lg-2 {
+        width: 16.66%;
+      }
+      .col-lg-3 {
+        width: 25%;
+      }
+      .col-lg-4 {
+        width: 33%;
+      }
+      .col-lg-5 {
+        width: 41.66%;
+      }
+      .col-lg-6 {
+        width: 50%;
+      }
+      .col-lg-7 {
+        width: 58.33%;
+      }
+      .col-lg-8 {
+        width: 66.66%;
+      }
+      .col-lg-9 {
+        width: 74.99%;
+      }
+      .col-lg-10 {
+        width: 83.33%;
+      }
+      .col-lg-11 {
+        width: 91.66%;
+      }
+      .col-lg-12 {
+        width: 100%;
+      }
+      .nav-item {
+        display: none;
+      }
+    }
+
+    @media (min-width: 768px) and (max-width: 991px) {
+      .col-md-1,
+      .col-md-2,
+      .col-md-3,
+      .col-md-4,
+      .col-md-5,
+      .col-md-6,
+      .col-md-7,
+      .col-md-8,
+      .col-md-9,
+      .col-md-10,
+      .col-md-11,
+      .col-md-12 {
+        float: left;
+      }
+      .col-md-1 {
+        width: 8.33%;
+      }
+      .col-md-2 {
+        width: 16.66%;
+      }
+      .col-md-3 {
+        width: 25%;
+      }
+      .col-md-4 {
+        width: 33%;
+      }
+      .col-md-5 {
+        width: 41.66%;
+      }
+      .col-md-6 {
+        width: 50%;
+      }
+      .col-md-7 {
+        width: 58.33%;
+      }
+      .col-md-8 {
+        width: 66.66%;
+      }
+      .col-md-9 {
+        width: 74.99%;
+      }
+      .col-md-10 {
+        width: 83.33%;
+      }
+      .col-md-11 {
+        width: 91.66%;
+      }
+      .col-md-12 {
+        width: 100%;
+      }
+    }
+
+    @media (max-width: 767px) {
+      .col-sm-1,
+      .col-sm-2,
+      .col-sm-3,
+      .col-sm-4,
+      .col-sm-5,
+      .col-sm-6,
+      .col-sm-7,
+      .col-sm-8,
+      .col-sm-9,
+      .col-sm-10,
+      .col-sm-11,
+      .col-sm-12 {
+        float: left;
+      }
+      .col-sm-1 {
+        width: 8.33%;
+      }
+      .col-sm-2 {
+        width: 16.66%;
+      }
+      .col-sm-3 {
+        width: 25%;
+      }
+      .col-sm-4 {
+        width: 33%;
+      }
+      .col-sm-5 {
+        width: 41.66%;
+      }
+      .col-sm-6 {
+        width: 50%;
+      }
+      .col-sm-7 {
+        width: 58.33%;
+      }
+      .col-sm-8 {
+        width: 66.66%;
+      }
+      .col-sm-9 {
+        width: 74.99%;
+      }
+      .col-sm-10 {
+        width: 83.33%;
+      }
+      .col-sm-11 {
+        width: 91.66%;
+      }
+      .col-sm-12 {
+        width: 100%;
+      }
+    }
+  </style>
+
+  <body>
+    <header>
+      <!-- Navbar Start -->
+      <nav id="header-nav" class="navbar navbar-expand-lg navbar-light">
+        <div class="container">
+          <a class="navbar-brand" href="#">Food, LLC</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li id="navlink-1" class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#menu-1">Chicken</a>
+              </li>
+              <hr />
+              <li id="navlink-2" class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#menu-2">Beef</a>
+              </li>
+              <hr />
+              <li id="navlink-3" class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#menu-3">Sushi</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <!-- Navbar End -->
+    </header>
+
+    <section id="main">
+      <h1 id="Main">Our Menu</h1>
+    </section>
+
+    <div class="row">
+      <div class="col-lg-4 col-md-6 col-sm-12">
+        <section id="menu-1">
+          <div id="row-1-2-3">
+            <h3 class="menu-1">Chicken</h3>
+            <p id="p1">
+              Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney
+              College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes
+              from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first
+              line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32. The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de
+              Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham. Contrary to popular belief, Lorem Ipsum is not simply random
+              text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words,
+              consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et
+              Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes
+              from a line in section 1.10.32. The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced
+              in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham. <br />
+              (End of Chicken section) <a href="#main">Back To Top</a>
+            </p>
+          </div>
+        </section>
+      </div>
+
+      <div class="col-lg-4 col-md-6 col-sm-12">
+        <section id="menu-2">
+          <div id="row-1-2-3">
+            <h3 class="menu-2">Beef</h3>
+            <p id="p2">
+              Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney
+              College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes
+              from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first
+              line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32. The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de
+              Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham. Contrary to popular belief, Lorem Ipsum is not simply random
+              text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words,
+              consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et
+              Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes
+              from a line in section 1.10.32. The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced
+              in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.<br />
+              (End of Beef section) <a href="#main">Back To Top</a>
+            </p>
+          </div>
+        </section>
+      </div>
+
+      <div class="col-lg-4 col-md-12 col-sm-12">
+        <section id="menu-3">
+          <div id="row-1-2-3">
+            <h3 class="menu-3">Sushi</h3>
+            <p id="p3">
+              Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney
+              College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes
+              from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first
+              line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32. The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de
+              Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham. Contrary to popular belief, Lorem Ipsum is not simply random
+              text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words,
+              consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et
+              Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes
+              from a line in section 1.10.32. The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced
+              in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.<br />
+              (End of Sushi section) <a href="#main">Back To Top</a>
+            </p>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+  </body>
+</html>
